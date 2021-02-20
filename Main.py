@@ -58,7 +58,7 @@ class TelaPython:
             guarana = self.values['guarana']
             vazio = self.values['vazio']
             sliderLanches = int(self.values['lanches'])
-            sliderRefri = int(self.values['refri'])
+            sliderRefri = self.values['refri']
             obs = self.values['obs']
             lata = self.values['lata']
             garrafa = self.values['garrafa']
@@ -94,6 +94,9 @@ class TelaPython:
                 refrigerante = 'Nenhum'
                 sliderRefri = 0
                 escolha = 'Nenhum'
+            
+            if sliderRefri == 0:
+                refrigerante = 'Nenhum'
 
             print('########### NOTA DE PEDIDO ##########')
             print(f'Nome: {nome}')
